@@ -1,0 +1,66 @@
+span.high {
+    background-color: lightblue;
+    padding: 5px;
+    color: red;
+}
+span.accepted {
+    background-color: lightblue;
+    padding: 5px;
+    color: green;
+}
+span.inprogress {
+    background-color: lightblue;
+    padding: 5px;
+    color: blue;
+}
+
+.vertical-align-middle{
+    .auth-box{
+        .content{
+            .tasks{
+                display: flex;
+                justify-content: center;
+                .reject-task{
+                    margin-left: 10px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    border:1px solid rgb(204, 140, 140);
+                    background-color: rgb(231, 67, 67);
+                    color: white;
+                    box-shadow: 10px 10px 15px 15px #4e867c;
+                }
+                .reject-task:hover{
+                    background-color: red;
+                }
+            }
+            .accept-task{
+                margin-left: 10px;
+                padding: 10px;
+                border-radius: 10px;
+                border:1px solid rgb(88, 204, 123);
+                background-color: rgb(18, 179, 104);
+                color: white;
+                box-shadow: 10px 10px 15px 15px #4e867c;
+            }
+            .accept-task:hover{
+                background-color: green;
+            }
+            .yesterday-task{
+                display: flex;
+                justify-content: space-between;
+                button.btn.btn-danger {
+                    margin-top: 0;
+                }
+            }
+              }
+        }
+    }
+
+
+
+
+
+
+  
+  
+  

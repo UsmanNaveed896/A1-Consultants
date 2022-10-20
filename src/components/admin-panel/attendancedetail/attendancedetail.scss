@@ -1,0 +1,42 @@
+.main{
+    .vertical-align-wrap {
+        .vertical-align-middle{
+            .auth-box{
+                max-width: 800px;
+            }
+            .today-head{
+                text-align: center;
+            }
+            .content{
+                // text-align: center;
+                .table{
+                    th{
+                        font-size: 18px;
+                        color: white;
+                    }
+                  td{
+                    font-size: 16px;
+                        color: white;
+                        .fa-pencil-square-o{
+                            cursor: pointer;
+                        }
+                        .fa-trash{
+                            cursor: pointer;
+                        }
+                  }
+                }
+            }
+        }
+    }
+    .close-button{
+        background-color: #4cb6ac;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+    }
+    .close-button:hover{
+        background-color: #4e867c;
+    }
+}

@@ -1,0 +1,101 @@
+.Navbar{
+    border-bottom:  1px solid #4e867c;
+    background-color: #4cb6ac;
+  }
+  .main{
+  padding: 0;
+  .brand{
+    padding-left: 0.5rem;
+    margin-left: 5px;
+    color: white;
+}
+  .brand-button{
+    margin-top: 4px;
+    background:none;
+    border: none;
+    font-size: 39px;
+    color:white;
+    cursor: pointer;
+  }
+  .sidebar{
+    position: absolute;
+    z-index: 444;
+    transition: all .5s;
+    transform: translateX(-45rem);
+    background-color: #4cb6ac;
+    .close-button{
+        padding: 5px;
+    }
+    .sidebar-close-button{
+        color:white;
+        border: none!important;
+        float: right;
+        margin-top: -5px;
+        padding: .5rem;
+        font-size: 3rem;
+        padding-top: 0;
+        cursor: pointer;
+        background-color: transparent;
+      }
+      .sidebar-options{
+        background-color: #4e867c;
+        height: 99vh;
+      }
+  }
+  .sidebar.open{
+    margin-left: -15px;
+    padding: 0;
+    transform: translateX(0);
+    z-index: 444;
+  }
+  .signup-options ul li{
+    cursor: pointer;
+    color:white;
+    font-size: 17px;
+    padding:20px;
+    list-style-type: none;
+    line-height: 30px;
+  }
+  .signup-options ul{
+    padding: 0;
+    .info{
+        padding: 10px 0 0 21px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+.login-info{
+    .dropdown-quickacess{
+        cursor: pointer;
+          margin-right:1rem;
+      }
+      .login-access{
+        ul.dropdown-menu.show {
+            background-color: #4cb6ac;
+            color: white;
+            li.dropdown-item {
+                color: white;
+            }
+            
+.dropdown-item:focus, .dropdown-item:hover {
+    background-color: #4e867c;
+}
+        }
+      }
+}
+  }
+  button#dropdownMenuButton1 {
+    background-color: #4cb6ac;
+    color: white;
+    border:none;
+  }
+  .dropdown-icon{
+    margin-right:6px;
+    color: white;
+  }
+  .dropdown-item{
+    cursor: pointer;
+    color: rgba(0,0,0,.87);
+    font-size: 14px;
+  }
+ 

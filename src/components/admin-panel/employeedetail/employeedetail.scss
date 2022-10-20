@@ -1,0 +1,169 @@
+.main {
+    padding: 0 !important;
+    height: 100%;
+
+    .vertical-align-wrap {
+        width: 100%;
+        height: 100%;
+        display: table;
+        font-size: 16px;
+        line-height: 1.4285em;
+        background-color: #4cb6ac;
+
+        .vertical-align-middle {
+            display: table-cell;
+            vertical-align: middle;
+            color: white;
+
+            .auth-box {
+                border-radius: 0px 25px 0px 25px;
+                max-width: 480px;
+                height: auto;
+                margin: 0 auto;
+                background-color: #ffffff;
+                color: white;
+                box-shadow: 10px 10px 15px 15px #4e867c;
+                background-color: #4cb6ac;
+
+                .content {
+                    width: 99%;
+                    padding: 30px;
+                    vertical-align: middle;
+                    border-bottom: 7 px solid gray;
+                    ;
+
+                    .form-group {
+                        padding-bottom: 3px;
+
+                        input.form-control.form-control-lg {
+                            background: #4cb6ac;
+                            display: block;
+                            margin: 0 0 0.28571429rem 0;
+                            font-size: .92857143em;
+                            text-transform: none;
+                            height: 40px;
+                            border: none;
+                            color: white;
+                        }
+
+                        ::placeholder {
+                            color: White;
+                            opacity: 1;
+                        }
+
+                        .labels {
+                            display: block;
+                            margin: 0 0 0.28571429rem 0;
+                            font-size: 18px;
+                            font-weight: 400;
+                            text-transform: none;
+                        }
+
+                        select.selectpickeraddemployee.mt-2 {
+                            width: 100%;
+                            background-color: #4cb6ac;
+                            color: white;
+                            padding: 10px;
+                            border: none;
+
+                            option:hover {
+                                background-color: #4e867c;
+                            }
+                        }
+
+                        i.fa.fa-pencil-square-o {
+                            float: right;
+                            margin-left: 10px;
+                            font-size: 23px;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .action-btn {
+                        display: flex;
+                        justify-content: space-evenly;
+
+                        button.btn.btn-danger {
+                            width: 200px;
+                        }
+                    }
+
+                    .priorty-btn {
+                        display: flex;
+                        justify-content: space-evenly;
+
+                        .High-btn {
+                            padding: 20px;
+                            border-radius: 10px;
+                            border: 1px solid rgb(204, 140, 140);
+                            background-color: rgb(231, 67, 67);
+                            color: white;
+                            font-size: 18px;
+                            box-shadow: 10px 10px 15px 15px #4e867c;
+                        }
+                        .High-btn:hover{
+                            background-color: red;
+                        }
+                        .medium-btn {
+                            padding: 20px;
+                            border-radius: 10px;
+                            border: 1px solid rgb(88, 204, 123);
+                            background-color: rgb(18, 179, 104);
+                            color: white;
+                            font-size: 18px;
+                            box-shadow: 10px 10px 15px 15px #4e867c;
+                        }
+                        .medium-btn:hover{
+                            background-color: green;
+                        }
+                        .low-btn {
+                            padding: 20px;
+                            border-radius: 10px;
+                            border: 1px solid rgb(49, 194, 204);
+                            background-color: rgb(26, 211, 224);
+                            color: white;
+                            font-size: 18px;
+                            box-shadow: 10px 10px 15px 15px #4e867c;
+                        }
+                        .low-btn:hover{
+                            background-color: rgb(2, 179, 238);
+                        }
+                    }
+                    .yesterday-attendance{
+                        display: flex;
+                        justify-content: space-between;
+                        .attendance-btn{
+                            background-color: #4cb6ac;
+                            border: 1px solid white;
+                            color: white;
+                            padding: 12px;
+                            font-size: 16px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+button.btn.btn-danger {
+    background-color: #4cb6ac;
+    box-shadow: 5px 5px 5px 5px #4e867c;
+    color: #fff;
+    margin-top: 3rem;
+    border: none;
+    width: 100%;
+}
+
+button.btn.btn-danger:hover {
+    background-color: #4e867c
+}
+
+textarea {
+    border-radius: 10px;
+}
+.alert-msg {
+    text-align: center;
+    color: white;
+}

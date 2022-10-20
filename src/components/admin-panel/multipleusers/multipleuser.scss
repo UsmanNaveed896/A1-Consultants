@@ -1,0 +1,45 @@
+.main{
+    .vertical-align-middle{
+        .content{
+            .employee-data{
+                cursor: pointer;
+            .employee-data:hover{
+                background-color: #4e867c
+            }
+            .user-data{
+                display: flex;
+                .user-icon{
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 50%;
+                    box-shadow: 10px 10px 15px 15px #4e867c;
+                    i.fa.fa-user {
+                        font-size: 46px;
+                        margin-left: 14px;
+                        margin-top: 5px;
+                    }
+                }
+                .user-details{
+                    margin-left: 29px;
+                }
+               
+            }
+            .left-arrow{
+                font-size: 41px;
+                position: relative;
+                .fixed{
+                    position: absolute;
+                    right: 4%;
+                    bottom: 0%; 
+                    i.fa.fa-arrow-right {
+                        font-size: 41px;
+                        margin-bottom: 16px;
+                    }
+                }
+               
+                
+            }
+        }
+        }
+    }
+}
