@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './components/admin-panel/navbar/navbar';
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect} from 'react';
+import { useBeforeunload } from 'react-beforeunload';
 import Employeedetail from './components/admin-panel/employeedetail/employeedetail';
 import Login from './components/admin-panel/login/login'
 import Dashboard from './components/admin-panel/dashboard/dashboard'
@@ -84,6 +85,11 @@ function App() {
       Navigate('/login')
     }
   }, [])
+ 
+   useBeforeunload ((event)=>{
+    event.preventDefault();
+
+   })
   return (
     <>
       {(Location.pathname !== "/login") && <Navbar />}

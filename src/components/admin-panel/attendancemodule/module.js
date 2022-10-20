@@ -57,11 +57,11 @@ export default () => {
             }
         }
         axios.post(`https://crm-09.herokuapp.com/attendance/add`, status, headers).then((response) => {
-            console.log(response.data.savedEvent.employeeId
-                , "kaka")
             alert("Attendance Succesfully Marked")
+            Navigate('/')
             setActiveButton(true)
             setEnabled(true)
+           
         })
     }
     return (

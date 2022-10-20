@@ -2,18 +2,17 @@ import './attendancedetail.scss'
 import '../employeedetail/employeedetail.scss'
 import { useState, useEffect } from 'react'
 import moment from 'moment';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Cookie from 'react-cookies'
 import Spinner from 'react-bootstrap/Spinner';
 import axios from 'axios';
 export default () => {
-    const params = useParams();
     const Navigate = useNavigate();
     const [userId, setUserId] = useState();
     const [employee, setEmployee] = useState([])
-    const [loader,setLoader]=useState(false)
-    const [status,setStatus]=useState({
-        wstatus:"",
+    const [loader, setLoader] = useState(false)
+    const [status, setStatus] = useState({
+        wstatus: "",
     })
     const [time, setTime] = useState({
         date: '',
@@ -39,17 +38,17 @@ export default () => {
         })
     }, []);
 
-    const editAttendance= () => {
+    const editAttendance = () => {
         let token = Cookie.load('token');
         let headers = {
             headers: {
-                Authorization : "Bearer " + token
+                Authorization: "Bearer " + token
             }
         }
-        let payLoad={
-            wstatus:status.wstatus,
+        let payLoad = {
+            wstatus: status.wstatus,
         }
-        axios.patch(`https://crm-09.herokuapp.com/attendance/leavestatus/${userId}` , payLoad,headers).then((response) => {
+        axios.patch(`https://crm-09.herokuapp.com/attendance/leavestatus/${userId}`, payLoad, headers).then((response) => {
             setEmployee(response)
             alert(" Succesfully Updated")
             Navigate('/markattendance/')
@@ -78,36 +77,38 @@ export default () => {
                             <div className="content">
                                 <h3 >{time.date}</h3>
                                 <div className="table-contents table-responsive mt-5">
-                                    <table className="table table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">ID</th>
-                                                <th scope="col">Employee</th>
-                                                <th scope="col">Date</th>
-                                                <th scope="col">Time</th>
-                                                <th scope="col">Edit</th>
-                                                <th scope="col">Delete</th>
+                                    {loader ? <div>
+                                        {employee.length === 0 ? <div className="alert-msg mt-4"><h5>No Records Today</h5><i class="fa fa-times" aria-hidden="true"></i></div> :
+                                            employee.map((index) => (
+                                                <table className="table table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">ID</th>
+                                                            <th scope="col">Employee</th>
+                                                            <th scope="col">Date</th>
+                                                            <th scope="col">Time</th>
+                                                            <th scope="col">Edit</th>
+                                                            <th scope="col">Delete</th>
 
-                                            </tr>
-                                        </thead>
-                                  {loader ? <div>
-                                        {employee.length===0 ? <div className="alert-msg mt-4"><h5>No Records Today</h5><i class="fa fa-times" aria-hidden="true"></i></div> :
-                                           employee.map((index) => (
-                                        <tbody>
-                                           
-                                                <tr>
-                                                    <td>{index.employeeId}</td>
-                                                    <td>{index.employeeName}</td>
-                                                    <td>{index.startdate}</td>
-                                                    <td>{index.startTime}</td>
-                                                    <td className=" return-add" data-toggle="modal" data-target="#myModal" onClick={() => setUserId(index._id)}><i class="fa fa-pencil-square-o" aria-hidden="true"></i> </td>
-                                                    <td className=" return-add" data-toggle="modal" data-target="#myModal1" onClick={() => setUserId(index._id)}> <i className="fa fa-trash" aria-hidden="true"></i></td>
-                                                </tr>
-                                            
+                                                        </tr>
+                                                    </thead>
 
-                                        </tbody>
-                                        ))}</div> : <div className='spin' style={{textAlign : "center" , color: "white"}}><Spinner animation="border" /></div> }
-                                    </table>
+                                                    <tbody>
+
+                                                        <tr>
+                                                            <td>{index.employeeId}</td>
+                                                            <td>{index.employeeName}</td>
+                                                            <td>{index.startdate}</td>
+                                                            <td>{index.startTime}</td>
+                                                            <td className=" return-add" data-toggle="modal" data-target="#myModal" onClick={() => setUserId(index._id)}><i class="fa fa-pencil-square-o" aria-hidden="true"></i> </td>
+                                                            <td className=" return-add" data-toggle="modal" data-target="#myModal1" onClick={() => setUserId(index._id)}> <i className="fa fa-trash" aria-hidden="true"></i></td>
+                                                        </tr>
+
+
+                                                    </tbody>
+
+                                                </table>
+                                            ))}</div> : <div className='spin' style={{ textAlign: "center", color: "white" }}><Spinner animation="border" /></div>}
                                 </div>
                             </div>
                         </div>
@@ -125,13 +126,13 @@ export default () => {
                                 <form>
                                     <div className="form-group">
                                         <label for="exampleFormControlTextarea11">Status</label>
-                                        <input type="text" className="form-control mt-2" id="exampleFormControlTextarea1" aria-describedby="emailHelp" placeholder="Enter Employee" 
-                                        onChange={(e)=>{setStatus({wstatus:e.target.value})}}/>
+                                        <input type="text" className="form-control mt-2" id="exampleFormControlTextarea1" aria-describedby="emailHelp" placeholder="Enter Employee"
+                                            onChange={(e) => { setStatus({ wstatus: e.target.value }) }} />
                                     </div>
                                 </form>
                             </div>
                             <div className="modal-footer">
-                            <button type="button" className="close-button" onClick={()=> editAttendance()} >Edit</button>
+                                <button type="button" className="close-button" onClick={() => editAttendance()} >Edit</button>
                                 <button type="button" className="close-button" data-dismiss="modal">Close</button>
                             </div>
                         </div>
