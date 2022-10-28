@@ -4,7 +4,7 @@
             .employee-data{
                 cursor: pointer;
             .employee-data:hover{
-                background-color: #4e867c
+                  background-color: #0d4172
             }
             .user-data{
                 display: flex;
@@ -12,11 +12,12 @@
                     height: 60px;
                     width: 60px;
                     border-radius: 50%;
-                    box-shadow: 10px 10px 15px 15px #4e867c;
+                    box-shadow:5px 5px 5px 5px#1e75c7;
                     i.fa.fa-user {
                         font-size: 46px;
                         margin-left: 14px;
                         margin-top: 5px;
+                        color: #1e75c7;
                     }
                 }
                 .user-details{
@@ -34,6 +35,7 @@
                     i.fa.fa-arrow-right {
                         font-size: 41px;
                         margin-bottom: 16px;
+                        color: #1e75c7;
                     }
                 }
                

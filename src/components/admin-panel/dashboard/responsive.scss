@@ -1,0 +1,9 @@
+  @media (max-width: 479px) and (min-width: 320px) {
+    .container.dashboard {
+        margin-top: 0!important;
+        height: fit-content!important;
+        .emp-list {
+            margin-top: 48px;
+        }
+    } 
+    }

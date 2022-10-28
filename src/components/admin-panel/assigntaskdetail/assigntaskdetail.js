@@ -8,7 +8,7 @@ export default () => {
     const Navigate = useNavigate()
     const[users,setUsers]=useState({})
     const params=useParams()
-    const [activeButton, setActiveButton] = useState(true)
+    const [activeButton, setActiveButton] = useState(true);
     const taskAuth = "pending";
     const addedDate = moment().format("YYYY-MM-DD");
     const addedMonth = moment().format("MM");
@@ -31,7 +31,6 @@ export default () => {
     useEffect(() => {
         loadUsers();
     }, []);
-    const date = moment().format("YYYY-MM-DD");
     const loadUsers = async () => {
         let token = Cookie.load('token');
         let headers = {
@@ -63,7 +62,7 @@ export default () => {
             addedYear:status. addedYear,
         }
         axios.post(`https://crm-09.herokuapp.com/task/add`, payLoad, headers).then((response) => {
-            alert("You Have Succesfully Applied For Leave")
+            alert("You Have Succesfully Assigned Task")
             Navigate('/')
             setActiveButton(false)
         })
@@ -82,8 +81,8 @@ export default () => {
                                             <form >
                                                 <p><label for="w3review">Assign Task to {users.name} </label></p>
                                                 <textarea id="w3review" name="leavereason" rows="4" cols="50" placeholder='Please Enter Reason For Leave' onChange={(e) => {
-                                                    setStatus({task:e.target.value,taskAuth:taskAuth,taskAssignTime:taskAssignTime,addedDate:addedDate,addedMonth:addedMonth,addedYear:addedYear })                                                
-                                                    setActiveButton(false)
+                                                    setStatus({task:e.target.value,taskAuth:taskAuth,taskAssignTime:taskAssignTime,addedDate:addedDate,addedMonth:addedMonth,addedYear:addedYear });                                                
+                                                  setActiveButton(false)
                                                 }}></textarea>
                                             </form>
                                         </div>
@@ -91,9 +90,9 @@ export default () => {
                                 </form>
                                 <div className="assign-task mt-5">
                                     <div className="priorty-btn">
-                                        <div className="High"><button className="High-btn" value={"high"}   onClick={(e) => {setPriority({priority:e.target.value }) }}>High</button></div>
-                                        <div className="low mt-5"><button className="low-btn" value={"low"}   onClick={(e) => {setPriority({priority:e.target.value })}}>Low</button></div>
-                                        <div className="medium"><button className="medium-btn" type="submit" value={"medium"}   onClick={(e) => {setPriority({priority:e.target.value })}}>Medium</button></div>
+                                        <div className="High"><button className=" btn btn-danger High-btn" value={"high"} disabled={activeButton}  onClick={(e) => {setPriority({priority:e.target.value })  }}>High</button></div>
+                                        <div className="low mt-5"><button className=" btn btn-danger low-btn"  value={"low"}  disabled={activeButton} onClick={(e) => {setPriority({priority:e.target.value }) }}>Low</button></div>
+                                        <div className="medium"><button className=" btn btn-danger medium-btn"   value={"medium"} disabled={activeButton}  onClick={(e) => {setPriority({priority:e.target.value }) }}>Medium</button></div>
                                     </div>
                                 </div>
                                 <div className="action-btn">

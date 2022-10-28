@@ -88,6 +88,7 @@ function App() {
  
    useBeforeunload ((event)=>{
     event.preventDefault();
+    Cookie.remove('token')
 
    })
   return (

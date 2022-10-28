@@ -6,9 +6,9 @@
         width: 100%;
         height: 100%;
         display: table;
-        font-size: 16px;
+        font-size: 19px;
         line-height: 1.4285em;
-        background-color: #4cb6ac;
+        background-color: #1e75c7;
 
         .vertical-align-middle {
             display: table-cell;
@@ -16,34 +16,40 @@
             color: white;
 
             .auth-box {
-                border-radius: 0px 25px 0px 25px;
-                max-width: 480px;
+                border-radius: 10px;
+                max-width: 800px;
                 height: auto;
                 margin: 0 auto;
                 background-color: #ffffff;
-                color: white;
-                box-shadow: 10px 10px 15px 15px #4e867c;
-                background-color: #4cb6ac;
+                color: #334554;
+                box-shadow:5px 5px 5px 5px#1e75c7;
+                background: #eefaff;
 
                 .content {
                     width: 99%;
                     padding: 30px;
                     vertical-align: middle;
                     border-bottom: 7 px solid gray;
-                    ;
-
+                    .leave-img{
+                       text-align: center;
+                        img.leave-image {
+                            height: 200px;
+                            width: 400px;
+                            border-radius: 10px;
+                        }
+                    }
                     .form-group {
                         padding-bottom: 3px;
 
                         input.form-control.form-control-lg {
-                            background: #4cb6ac;
+                            
                             display: block;
                             margin: 0 0 0.28571429rem 0;
                             font-size: .92857143em;
                             text-transform: none;
                             height: 40px;
-                            border: none;
-                            color: white;
+                            border: 1 px solid #1e75c7;
+                            color: #334554;
                         }
 
                         ::placeholder {
@@ -61,8 +67,7 @@
 
                         select.selectpickeraddemployee.mt-2 {
                             width: 100%;
-                            background-color: #4cb6ac;
-                            color: white;
+                            color: #334554;
                             padding: 10px;
                             border: none;
 
@@ -133,12 +138,15 @@
                         display: flex;
                         justify-content: space-between;
                         .attendance-btn{
-                            background-color: #4cb6ac;
+                            background-color: #1e75c7;
                             border: 1px solid white;
                             color: white;
                             padding: 12px;
                             font-size: 16px;
                             border-radius: 10px;
+                        }
+                        .attendance-btn:hover{
+                            background-color: #0d4172
                         }
                     }
                 }
@@ -148,8 +156,8 @@
 }
 
 button.btn.btn-danger {
-    background-color: #4cb6ac;
-    box-shadow: 5px 5px 5px 5px #4e867c;
+    background-color: #1e75c7;
+    box-shadow: 5px 5px 5px 5px #1e75c7;
     color: #fff;
     margin-top: 3rem;
     border: none;
@@ -157,13 +165,14 @@ button.btn.btn-danger {
 }
 
 button.btn.btn-danger:hover {
-    background-color: #4e867c
+    background-color: #0d4172
 }
 
 textarea {
     border-radius: 10px;
+    padding: 10px;
 }
 .alert-msg {
     text-align: center;
-    color: white;
+    color: #334554;
 }

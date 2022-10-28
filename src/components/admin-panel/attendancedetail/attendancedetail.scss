@@ -1,9 +1,14 @@
 .main{
     .vertical-align-wrap {
-        .vertical-align-middle{
-            .auth-box{
-                max-width: 800px;
-            }
+        .attendance-wrap{
+            background-color: white;
+            padding: 50px;
+            overflow-x: auto;
+            border-radius: 10px;
+            margin-top: 50px;
+            // .auth-box{
+            //     max-width: 800px;
+            // }
             .today-head{
                 text-align: center;
             }
@@ -12,11 +17,11 @@
                 .table{
                     th{
                         font-size: 18px;
-                        color: white;
+                        color: #334554;
                     }
                   td{
                     font-size: 16px;
-                        color: white;
+                    color: #334554;
                         .fa-pencil-square-o{
                             cursor: pointer;
                         }
@@ -29,14 +34,14 @@
         }
     }
     .close-button{
-        background-color: #4cb6ac;
-        color: white;
+        background-color: #1e75c7;
+        color: #334554;
         cursor: pointer;
         padding: 10px;
         border-radius: 5px;
         border: none;
     }
     .close-button:hover{
-        background-color: #4e867c;
+        background-color: #0d4172
     }
 }

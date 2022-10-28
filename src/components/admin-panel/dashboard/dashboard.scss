@@ -1,34 +1,54 @@
-.main{
+.main-dashboard{
     height: 100%;
-}
+    background-color: #1e75c7;
+    position: absolute;
+
+.container.dashboard {
+    padding: 40px 20px 60px 20px;
+    background: #eefaff;
+    margin-top: 10rem;
+    border-radius: 20px;
+    max-width: 1290px;
 .employee-action {
     justify-content: space-evenly;
     display: flex;
+    flex-wrap: wrap;
     text-align: center;
+    .image-dashboard{
+        height: 100px;
+        border-radius: 50%;
+    }
+    .image-dashboard-two{
+        height: 100px;
+        border-radius: 50%;
+        margin-top: -10px;
+    }
     .add-emp{
         cursor: pointer;
         font-weight: 500;
         padding: 10px;
         font-size: 21px;
         border-radius: 10px;
-        width: 170px;
-        height: 120px;
-        color: white;
-        box-shadow:10px 10px 15px 15px #4e867c;
-        background-color: #4cb6ac;
+        width: 200px;
+        height: 200px;
+        color: #334554;
+        box-shadow:5px 5px 5px 5px#1e75c7;
+        background-color: #e9f6f5;
+        transition: 1s;
         p{
+            line-height: 25px;
             margin-top: 25px;
         }
         .icon{
-           
-            margin-left: 49px;
+            margin-left: 60px;
             padding: 8px;
+            color: white;
             position: absolute;
             border: 1px solid white;
             border-radius: 50%;
             margin-top: -38px;
-            background-color: #4cb6ac;
-            box-shadow:5px 5px 5px 5px #4e867c;
+            background-color: #1e75c7;
+            box-shadow:5px 5px 5px 5px #1e75c7;
         }
         i.fa.fa-user-plus {
             font-size: 30px;
@@ -37,30 +57,36 @@
             font-size: 30px;
         }
     }
+    .add-emp:hover{
+        transform: scale(1.1);
+    }
     .emp-list{
         cursor: pointer;
         font-weight: 500;
         padding: 10px;
         font-size: 21px;
         border-radius: 10px;
-        width: 170px;
-        height: 120px;
-        color: white;
-        box-shadow:10px 10px 15px 15px #4e867c;
-        background-color: #4cb6ac;
+        width: 200px;
+        height: 200px;
+        color: #334554;
+        box-shadow:5px 5px 5px 5px#1e75c7;
+        background-color: #e9f6f5;
+        transition: 1s;
         p{
+            line-height: 25px;
             margin-top: 25px;
         }
             .icon {
                 border-radius: 50%;
-                margin-left: 47px;
+                margin-left: 60px;
                 padding: 8px;
+                color: white;
                 position: absolute;
                 border: 1px solid white;
                 border-radius: 50%;
                 margin-top: -38px;
-                background-color: #4cb6ac;
-                box-shadow:5px 5px 5px 5px #4e867c;
+                background-color: #1e75c7;
+                 box-shadow:5px 5px 5px 5px #1e75c7;
             }
             i.fa.fa-users {
                 font-size: 30px;
@@ -68,6 +94,9 @@
             i.fa.fa-tasks {
                 font-size: 30px;
             }
+    }
+    .emp-list:hover{
+        transform: scale(1.1);
     }
     i.fa.fa-check-circle-o {
         font-size: 30px;
@@ -94,6 +123,5 @@ a {
     color: white!important;
     text-decoration: auto!important;
 }
-
-
-
+}
+}

@@ -71,7 +71,7 @@ export default () => {
         <>
             <div className="container-fluid main">
                 <div className='vertical-align-wrap '>
-                    <div className="  vertical-align-middle">
+                    <div className="container attendance-wrap">
                         <div className="today-head"> <h3>Today Attendance</h3></div>
                         <div className='auth-box mt-5 '>
                             <div className="content">
@@ -80,6 +80,7 @@ export default () => {
                                     {loader ? <div>
                                         {employee.length === 0 ? <div className="alert-msg mt-4"><h5>No Records Today</h5><i class="fa fa-times" aria-hidden="true"></i></div> :
                                             employee.map((index) => (
+                                                
                                                 <table className="table table-hover">
                                                     <thead>
                                                         <tr>
@@ -132,8 +133,8 @@ export default () => {
                                 </form>
                             </div>
                             <div className="modal-footer">
-                                <button type="button" className="close-button" onClick={() => editAttendance()} >Edit</button>
-                                <button type="button" className="close-button" data-dismiss="modal">Close</button>
+                                <button type="button" className="close-button"  style={{"color":"white"}} onClick={() => editAttendance()} >Edit</button>
+                                <button type="button" className="close-button" style={{"color":"white"}} data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
@@ -155,8 +156,8 @@ export default () => {
 
                             </div>
                             <div className="modal-footer">
-                                <button type="button" className="close-button" data-dismiss="modal" onClick={() => { deleteUser() }}>Delete</button>
-                                <button type="button" className="close-button" data-dismiss="modal">Close</button>
+                                <button type="button" className="close-button"  style={{"color":"white"}} data-dismiss="modal" onClick={() => { deleteUser() }}>Delete</button>
+                                <button type="button" className="close-button"   style={{"color":"white"}}data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>

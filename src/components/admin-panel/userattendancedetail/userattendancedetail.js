@@ -1,7 +1,6 @@
-import '../employeedetail/employeedetail.scss'
+import '../attendancedetail/attendancedetail.scss'
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom';
-import moment from 'moment';
 import Cookie from 'react-cookies'
 import axios from 'axios';
 export default () => {
@@ -24,7 +23,7 @@ const Navigate = useNavigate()
         <>
             <div className="container-fluid main">
                 <div className='vertical-align-wrap '>
-                    <div className="  vertical-align-middle">
+                    <div className=" container attendance-wrap">
 
                         <div className="today-head"> <h3>{users.employeeName} Attendance Detail</h3></div>
                         <div className='auth-box mt-5 '>

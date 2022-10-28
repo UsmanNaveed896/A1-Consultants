@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import {useParams, useNavigate } from 'react-router-dom';
 import Cookie from 'react-cookies'
 import axios from 'axios';
+import IMG1 from '../../../Assets/16.jpg'
+import '../employeedetail/employeedetail.scss'
 export default () => {
     const Navigate = useNavigate();
     const params=useParams();
@@ -32,9 +34,10 @@ const setStatusApi = (e) => {
                 <div className='vertical-align-wrap '>
                     <div className="  vertical-align-middle">
                         <div className='auth-box mt-5 '>
-                            <div className="content">               
+                            <div className="content">  
+                           <div className='leave-img'> <img className='leave-image' src={IMG1} alt="leave" />   </div>          
                                 <form>
-                                    <div className="attendance-radio">
+                                    <div className="attendance-radio"> 
                                         <div className="form-radio mt-4">
                                             <div class="form-check">
                                                 <input className="form-check-input" type="radio" name="st" id="flexRadioDefault1"  value={"leave"} onChange={(e)=>{setStatus({wstatus:e.target.value,leavestatus:approveStatus})}} />

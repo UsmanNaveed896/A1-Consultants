@@ -26,11 +26,12 @@
                     }
                 }
             }
+          
         }
     }
 }
 .dropbtn {
-    background-color: #4cb6ac;
+    background-color: #1e75c7;
     border: 1px solid white;
     color: white;
     padding: 12px;
@@ -45,9 +46,10 @@
   }
   
   .dropdown-content {
+    color: white;
     display: none;
     position: absolute;
-    background-color: #4cb6ac;
+    background-color: #1e75c7;
     min-width: 140px;
     z-index: 1;
   }
@@ -56,17 +58,17 @@
     padding: 12px 16px;
     display: block;
   }
-  .dropdown-content a:hover {background-color: #4e867c;}
+  .dropdown-content a:hover {background-color: #0d4172;}
   
   .dropdown:hover .dropdown-content {display: block;}
   
-  .dropdown:hover .dropbtn {background-color: #4e867c;}
+  .dropdown:hover .dropbtn {background-color: #0d4172;}
   .leave-drop {
     display: flex;
     justify-content: space-between;
     .daily-attendance{
         .attendance-btn{
-            background-color: #4cb6ac;
+            background-color: #1e75c7;
             border: 1px solid white;
             color: white;
             padding: 12px;

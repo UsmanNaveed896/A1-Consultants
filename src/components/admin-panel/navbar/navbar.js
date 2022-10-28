@@ -28,7 +28,7 @@ const logoutUser=()=>{
     return(
         <>
         <nav>
-            <div className="container-fluid main">
+            <div className="container-fluid main-nav">
                 <div className="Navbar d-flex ">
                     <div className="dropdown-menu-a col-md-4">
                         <div className="brand d-flex mt-1">
@@ -38,13 +38,13 @@ const logoutUser=()=>{
                         <div className="sidebar col-md-2">
                             
                             <div className="sidebar-options">
-                                <div className="close-button">
+                                <div className="close-button-nav">
                                 <button className="sidebar-close-button" onClick={closeMenu}>x</button>
                             </div>
                                 <div className="signup-options">
                                     <ul>
-                                        <li><h3>Welcome</h3></li>
-                                        {userType === 'admin' ? <li><h5>Admin@gmail.com</h5></li> : <li><h5>{userName}</h5></li> }
+                                        <li><h1  className='dropdown-icon'>Welcome</h1></li>
+                                        {userType === 'admin' ? <li><h4 className='dropdown-icon'>Admin@gmail.com</h4></li> : <li><h5>{userName}</h5></li> }
                                         <Link to ="/"><li><i class="fa fa-sliders dropdown-icon" aria-hidden="true"></i>DASHBOARD</li></Link> 
                                         {userType === 'admin' &&  <Link to ="/listview">  <li><i class="fa fa-users dropdown-icon" aria-hidden="true"></i>EMPLOYEE LIST</li></Link>}
                                         <li onClick={()=>logoutUser()}><i class="fa fa-calendar dropdown-icon" aria-hidden="true"></i>LOG OUT</li>
