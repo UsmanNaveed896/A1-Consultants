@@ -1,9 +1,9 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import {useParams, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Cookie from 'react-cookies'
-import moment from 'moment';
 import Spinner from 'react-bootstrap/Spinner';
+import '../../admin-panel/employeedetail/employeedetail.scss'
 export default () => {
     const [users, setUsers] = useState([]);
     const[loader,setLoader]=useState(false)
@@ -11,7 +11,6 @@ export default () => {
     useEffect(() => {
         loadUsers();
     }, []);
-    const date = moment().format("YYYY-MM-DD");
     const loadUsers = async () => {
         let token = Cookie.load('token');
         let headers = {

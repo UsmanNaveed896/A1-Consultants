@@ -1,9 +1,13 @@
   @media (max-width: 479px) and (min-width: 320px) {
+    .main-dashboard{
+      height: auto;
+      padding-bottom: 20px;
+    height: auto;
     .container.dashboard {
         margin-top: 0!important;
-        height: fit-content!important;
         .emp-list {
             margin-top: 48px;
         }
     } 
     }
+  }

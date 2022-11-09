@@ -1,6 +1,6 @@
 import '../multipleusers/multipleuser.scss'
 import axios from 'axios';
-import { useState, useEffect,useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Cookie from 'react-cookies'
 import moment from "moment"
@@ -28,10 +28,10 @@ export default () => {
     }   
     return (
         <>
-            <div className="container-fluid main">
+            <div className="container-fluid main-list">
                 <div className='vertical-align-wrap '>
                     <div className="  vertical-align-middle">
-                        <div className='auth-box mt-5 '>
+                        <div className='auth-box pt-5 '>
                             <div className="content">
                                 <h3>Monthly Attendance List</h3>
                         {loader ? <div>

@@ -19,14 +19,14 @@ export default (props) => {
                                         <p>Pending Task</p>
                                         <img className="image-dashboard"src={IMG2} alt="emp" />
                                     </div></Link> 
-                                    <Link to="/completed/today">     <div className="add-emp">
+                                    <Link to="/completed/today">     <div className="add-emp ">
                                         <div className="icon"><i class="fa fa-hourglass" aria-hidden="true"></i></div>
                                         <p>Completed Task</p>
                                         <img className="image-dashboard"src={IMG5} alt="emp" />
                                     </div></Link> 
                                 </div>
                                 <div className="employee-action mt-5">
-                                <Link to="/accepted/list/">      <div className="add-emp">
+                                <Link to="/accepted/list/">      <div className="add-emp ">
                                         <div className="icon"><i class="fa fa-check-square-o" aria-hidden="true"></i></div>
                                         <p>Accepted Task</p>
                                         <img className="image-dashboard"src={IMG3} alt="emp" />

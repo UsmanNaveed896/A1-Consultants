@@ -1,11 +1,11 @@
+import '../multipleusers/multipleuser.scss'
 import axios from 'axios'
 import { useState,useEffect } from 'react';
-import {useNavigate,useParams} from 'react-router-dom';  
+import {useNavigate} from 'react-router-dom';  
 import Cookie from 'react-cookies'
 import moment from 'moment';
 
 export default()=>{
-    const params=useParams();
     const Navigate=useNavigate()
     const [users,setUsers]=useState([])
     const postMonth=moment().format("MM");
@@ -24,7 +24,7 @@ export default()=>{
 
     return(
         <>
-        <div className="container-fluid main">
+        <div className="container-fluid main-list">
      <div className='vertical-align-wrap '>
          <div className="  vertical-align-middle">
              <div className='auth-box mt-5 '>
@@ -48,7 +48,7 @@ export default()=>{
                             </div>
                             <div className="form-group mt-4">
                                 <label className="labels"> Status: <span className="status" style={{backgroundColor:'white' , color :'blue' ,borderRadius:'8px', padding:'5px'}}>{user.leavestatus}</span> 
-                                <i className="fa fa-pencil-square-o  edit-icon" aria-hidden="true" onClick={()=>{Navigate(`/leavereq/${user._id}`)}}></i></label>
+                                <i className="fa fa-pencil-square-o   edit-icon" style={{"cursor":"pointer"}} aria-hidden="true" onClick={()=>{Navigate(`/leavereq/${user._id}`)}}></i></label>
                             </div>
                             </div> 
                      ))

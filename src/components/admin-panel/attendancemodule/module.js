@@ -1,5 +1,5 @@
 import './module.scss'
-import '../employeedetail/employeedetail.scss'
+import '../multipleusers/multipleuser.scss'
 import moment from 'moment';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -66,7 +66,7 @@ export default () => {
     }
     return (
         <>
-            <div className="container-fluid main">
+            <div className="container-fluid main-list">
                 <div className='vertical-align-wrap '>
                     <div className="  vertical-align-middle">
                         <div className='auth-box mt-5 '>

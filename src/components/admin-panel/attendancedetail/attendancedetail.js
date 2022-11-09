@@ -69,11 +69,11 @@ export default () => {
     }
     return (
         <>
-            <div className="container-fluid main">
+            <div className="container-fluid main-attendance">
                 <div className='vertical-align-wrap '>
                     <div className="container attendance-wrap">
                         <div className="today-head"> <h3>Today Attendance</h3></div>
-                        <div className='auth-box mt-5 '>
+                        <div className='auth-box '>
                             <div className="content">
                                 <h3 >{time.date}</h3>
                                 <div className="table-contents table-responsive mt-5">

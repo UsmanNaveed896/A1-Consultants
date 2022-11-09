@@ -1,6 +1,5 @@
 import '../../admin-panel/dashboard/dashboard.scss'
 import { Link } from 'react-router-dom'
-import { useState, useEffect } from 'react'
 import IMG1 from '../../../Assets/12.jpg'
 import IMG2 from '../../../Assets/13.jpg'
 export default (props) => {
@@ -21,7 +20,7 @@ export default (props) => {
                                     <Link to="/adminrejectedleaves"><div className="emp-list">
                                         <div className="icon"><i class="fa fa-calendar" aria-hidden="true"></i></div>
                                         <p>Rejected Leaves</p>
-                                        <img className="image-dashboard"src={IMG1} alt="emp" />
+                                        <img className="image-dashboard"src={IMG2} alt="emp" />
                                     </div>
                                     </Link>
                                 </div>

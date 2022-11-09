@@ -1,6 +1,38 @@
-.main{
-    .vertical-align-middle{
+.main-list{
+    padding: 0 !important;
+    height: 100%;
+    .vertical-align-wrap{
+        height: 100%;
+        padding: 50px 0 50px 0;
+        font-size: 19px;
+        line-height: 1.4285em;
+        background-color: #1e75c7;
+        .vertical-align-middle{
+            color: white;
+            padding-top: 60px;
+        .auth-box{
+            border-radius: 10px;
+                max-width: 800px;
+                height: auto;
+                margin: 0 auto;
+                background-color: #ffffff;
+                color: #334554;
+                box-shadow:5px 5px 5px 5px#1e75c7;
+                background: #eefaff;
+        }
         .content{
+            width: 99%;
+                    padding: 30px;
+                    vertical-align: middle;
+                    border-bottom: 7 px solid gray;
+                    .leave-img{
+                        text-align: center;
+                         img.leave-image {
+                             height: 200px;
+                             width: 300px;
+                             border-radius: 10px;
+                         }
+                     }
             .employee-data{
                 cursor: pointer;
             .employee-data:hover{
@@ -43,5 +75,6 @@
             }
         }
         }
+    }
     }
 }

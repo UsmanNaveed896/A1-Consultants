@@ -1,19 +1,16 @@
 .main {
     padding: 0 !important;
-    height: 100%;
-
     .vertical-align-wrap {
-        width: 100%;
-        height: 100%;
-        display: table;
+        padding: 50px 0 50px 0;
         font-size: 19px;
         line-height: 1.4285em;
         background-color: #1e75c7;
 
         .vertical-align-middle {
-            display: table-cell;
+            // display: table-cell;
             vertical-align: middle;
             color: white;
+            padding-top: 60px;
 
             .auth-box {
                 border-radius: 10px;
@@ -30,19 +27,9 @@
                     padding: 30px;
                     vertical-align: middle;
                     border-bottom: 7 px solid gray;
-                    .leave-img{
-                       text-align: center;
-                        img.leave-image {
-                            height: 200px;
-                            width: 400px;
-                            border-radius: 10px;
-                        }
-                    }
                     .form-group {
                         padding-bottom: 3px;
-
-                        input.form-control.form-control-lg {
-                            
+                        input.form-control.form-control-lg {                            
                             display: block;
                             margin: 0 0 0.28571429rem 0;
                             font-size: .92857143em;
@@ -154,7 +141,9 @@
         }
     }
 }
-
+input.pass-input {
+    border: none;
+}
 button.btn.btn-danger {
     background-color: #1e75c7;
     box-shadow: 5px 5px 5px 5px #1e75c7;
@@ -175,4 +164,51 @@ textarea {
 .alert-msg {
     text-align: center;
     color: #334554;
+}
+.employee-data{
+    cursor: pointer;
+.employee-data:hover{
+      background-color: #0d4172
+}
+.user-data{
+    display: flex;
+    .user-icon{
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        box-shadow:5px 5px 5px 5px#1e75c7;
+        i.fa.fa-user {
+            font-size: 46px;
+            margin-left: 14px;
+            margin-top: 5px;
+            color: #1e75c7;
+        }
+    }
+    .user-details{
+        margin-left: 29px;
+    }
+   
+}
+.left-arrow{
+    font-size: 41px;
+    position: relative;
+    .fixed{
+        position: absolute;
+        right: 4%;
+        bottom: 0%; 
+        i.fa.fa-arrow-right {
+            font-size: 41px;
+            margin-bottom: 16px;
+            color: #1e75c7;
+        }
+    }     
+}
+}
+.span-pass{
+    font-size: 16px;
+}
+input.pass-check {
+    height: 12px;
+    margin-left: 5px;
+    cursor: pointer;
 }

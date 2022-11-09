@@ -1,12 +1,10 @@
 import axios from 'axios'
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Cookie from 'react-cookies'
-import moment from 'moment';
-
+import '../../admin-panel/multipleusers/multipleuser.scss'
 export default () => {
     const params=useParams();
-    console.log(params,"usm")
     const Navigate = useNavigate()
     const [activeButton, setActiveButton] = useState(true)
     const [status, setStatus] = useState({
@@ -15,7 +13,6 @@ export default () => {
     const setStatusApi = (e) => {
         e.preventDefault(e)
         let token = Cookie.load('token');
-        let userid = Cookie.load('userid')
         let headers = {
             headers: {
                 Authorization: "Bearer " + token,
@@ -29,7 +26,7 @@ export default () => {
     }
     return (
         <>
-            <div className="container-fluid main">
+            <div className="container-fluid main-list">
                 <div className='vertical-align-wrap '>
                     <div className="  vertical-align-middle">
                         <div className='auth-box mt-5 '>

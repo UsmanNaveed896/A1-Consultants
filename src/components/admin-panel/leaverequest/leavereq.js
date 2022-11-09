@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
+import {useState } from 'react';
 import {useParams, useNavigate } from 'react-router-dom';
 import Cookie from 'react-cookies'
 import axios from 'axios';
 import IMG1 from '../../../Assets/16.jpg'
-import '../employeedetail/employeedetail.scss'
+import '../multipleusers/multipleuser.scss'
 export default () => {
     const Navigate = useNavigate();
     const params=useParams();
@@ -30,7 +30,7 @@ const setStatusApi = (e) => {
     }
     return (
         <>
-            <div className="container-fluid main">
+            <div className="container-fluid main-list">
                 <div className='vertical-align-wrap '>
                     <div className="  vertical-align-middle">
                         <div className='auth-box mt-5 '>

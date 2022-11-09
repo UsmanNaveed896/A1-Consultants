@@ -5,6 +5,7 @@ import './employeedetail.scss';
 import Cookie from 'react-cookies'
 export default (props)=>{
 const[users,setUsers]=useState({})
+const[password,setPassword] =useState(false)
 const params=useParams();
 const Navigate=useNavigate()
 useEffect (()=>{
@@ -48,7 +49,8 @@ setUsers()
                            <label className="labels">Email: {users.email}</label>
                        </div>
                        <div className="form-group mt-4">
-                           <label className="labels">Password: {users.password}</label>
+                           <label className="labels">Password: <input  className="pass-input" type= {password ? "text" : "password" } value={users.password}/></label>
+                         <span className='span-pass'>Show Password </span><input className='pass-check' type="checkbox" onClick={()=>{setPassword(!password)}}/>
                        </div>
                        <div className="form-group mt-4">
                            <label className="labels">Address:{users.address}</label>

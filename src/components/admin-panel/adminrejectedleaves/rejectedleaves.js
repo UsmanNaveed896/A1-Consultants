@@ -1,18 +1,13 @@
 import axios from 'axios'
 import { useState,useEffect } from 'react';
-import {useNavigate,useParams} from 'react-router-dom';  
 import Cookie from 'react-cookies'
 import moment from 'moment';
-
 export default()=>{
-    const params=useParams();
-    const Navigate=useNavigate()
     const [users,setUsers]=useState([{}])
     const month=moment().format("MM");
     const year=moment().format("YYYY");
   useEffect(()=>{
     let token = Cookie.load('token');
-    let userid=Cookie.load('userid')
     let headers = {
         headers: {
             Authorization: "Bearer " + token,

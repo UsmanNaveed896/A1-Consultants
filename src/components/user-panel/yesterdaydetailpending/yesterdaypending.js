@@ -3,11 +3,10 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Cookie from 'react-cookies'
 import moment from 'moment';
+import '../../admin-panel/multipleusers/multipleuser.scss'
 export default () => {
     const [users, setUsers] = useState([]);
     const Navigate = useNavigate();
-    const date = moment().format("YYYY-MM-DD");
-
     useEffect(() => {
         loadUsers();
     }, []);
@@ -24,7 +23,7 @@ export default () => {
     }
     return (
         <>
-            <div className="container-fluid main">
+            <div className="container-fluid main-list">
                 <div className='vertical-align-wrap '>
                     <div className="  vertical-align-middle">
                         <div className='auth-box mt-5 '>

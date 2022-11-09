@@ -3,7 +3,7 @@ import { useState,useEffect } from 'react';
 import {useNavigate,useParams} from 'react-router-dom';  
 import Cookie from 'react-cookies'
 import moment from 'moment';
-
+import '../multipleusers/multipleuser.scss'
 export default()=>{
     const params=useParams();
     const Navigate=useNavigate()
@@ -25,7 +25,7 @@ export default()=>{
 },[])
     return(
         <>
-        <div className="container-fluid main">
+        <div className="container-fluid main-list">
      <div className='vertical-align-wrap '>
          <div className="  vertical-align-middle">
              <div className='auth-box mt-5 '>

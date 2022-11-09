@@ -1,19 +1,22 @@
-.main{
+.main-attendance{
+    height: 100%;
+    padding: 0;
     .vertical-align-wrap {
+        font-size: 19px;
+        line-height: 1.4285em;
+        background-color: #1e75c7;
+        padding: 50px 0 50px 0;
+        height: 100%;
         .attendance-wrap{
             background-color: white;
             padding: 50px;
             overflow-x: auto;
             border-radius: 10px;
-            margin-top: 50px;
-            // .auth-box{
-            //     max-width: 800px;
-            // }
+           
             .today-head{
                 text-align: center;
             }
             .content{
-                // text-align: center;
                 .table{
                     th{
                         font-size: 18px;

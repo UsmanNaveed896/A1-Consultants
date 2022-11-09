@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Cookie from 'react-cookies'
 import moment from 'moment';
-
+import '../../admin-panel/employeedetail/employeedetail.scss'
 export default () => {
     const Navigate = useNavigate()
     const[users,setUsers]=useState({})
