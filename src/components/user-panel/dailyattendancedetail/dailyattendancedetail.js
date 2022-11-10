@@ -23,10 +23,9 @@ const Navigate = useNavigate()
 
     return (
         <>
-            <div className="container-fluid main">
+            <div className="container-fluid main-attendance">
                 <div className='vertical-align-wrap '>
-                    <div className="  vertical-align-middle">
-
+                    <div className="   container attendance-wrap">
                         <div className="today-head"> <h3>{users.employeeName} Attendance Detail</h3></div>
                         <div className='auth-box mt-5 '>
                             <div className="content">

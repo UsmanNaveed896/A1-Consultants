@@ -1,12 +1,10 @@
 import axios from 'axios';
-import { useState, useEffect,useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Cookie from 'react-cookies'
 import moment from "moment";
-import Spinner from 'react-bootstrap/Spinner';
 export default () => {
     const [users, setUsers] = useState([]);
-    const[loader,setLoader]=useState(false);
  const Navigate=useNavigate();
     useEffect(() => {
         loadUsers();
@@ -22,12 +20,11 @@ export default () => {
         }
           axios.get(`https://crm-09.herokuapp.com/attendance/empdaily/${userId}/${yesterdaydate}`, headers).then((res)=>{
          setUsers(res.data);
-         setLoader(true)
         });
     }   
     return (
         <>
-             <div className="container-fluid main">
+             <div className="container-fluid main-list">
                 <div className='vertical-align-wrap '>
                     <div className="  vertical-align-middle">
                         <div className='auth-box mt-5 '>

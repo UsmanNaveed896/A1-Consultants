@@ -1,8 +1,9 @@
 import axios from 'axios';
-import { useState, useEffect,useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Cookie from 'react-cookies'
 import moment from "moment"
+import '../../admin-panel/multipleusers/multipleuser.scss'
 export default () => {
     const [users, setUsers] = useState([]);
  const Navigate=useNavigate();
@@ -24,14 +25,14 @@ export default () => {
     }   
     return (
         <>
-            <div className="container-fluid main">
+            <div className="container-fluid  main-list">
                 <div className='vertical-align-wrap '>
-                    <div className="  vertical-align-middle">
+                    <div className=" vertical-align-middle">
                         <div className='auth-box mt-5 '>
                             <div className="content">
-                                <div className="yesterday-attendance">
+                                <div className="yesterday-attendance" style={{'display':'flex' , 'justifyContent': 'space-between'}}>
                                 <div><h3>Daily Attendance List</h3></div>
-                                <div><button  className="attendance-btn" onClick={()=>{Navigate('/yesterdatattendance/list')}}>Yesterday Attendance</button></div>
+                                <div><button  className="attendance-btn" style={{'backgroundColor': '#1e75c7', 'color':'white' ,'borderRadius': '5px' ,'padding':'10px', 'border':'#1e75c7'}} onClick={()=>{Navigate('/yesterdatattendance/list')}}>Yesterday Attendance</button></div>
                                 </div>
                                      <div className="employee-data" onClick={()=>{Navigate(`/dailyattendance/detail/${users._id}`)}}>
                                      {Object.keys(users).length === 0 ? <div className="alert-msg mt-4"><h5>No Records Today</h5><i class="fa fa-times" aria-hidden="true"></i></div> : 
@@ -42,10 +43,8 @@ export default () => {
                                        <div className="user-details mt-2">
                                              <h4>{users.employeeName}</h4>
                                          </div>
-                                         <div className="left-arrow">
-                                         <div className="fixed" ><i class="fa fa-arrow-right" aria-hidden="true"></i></div>
                                      </div>
-                                     </div>}
+                                     }
                                  </div>  
                             </div>
                         </div>

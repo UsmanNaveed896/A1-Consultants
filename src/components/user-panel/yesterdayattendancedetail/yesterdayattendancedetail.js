@@ -1,11 +1,8 @@
 import { useState, useEffect } from 'react'
-import { useParams, useNavigate } from 'react-router-dom';
 import moment from 'moment';
 import Cookie from 'react-cookies'
 import axios from 'axios';
 export default () => {
-const Navigate = useNavigate()  
- const params = useParams();
  const [users, setUsers] = useState([])
  let yesterdaydate = moment().subtract(1, 'day').format("YYYY-MM-DD")
     useEffect(() => {
@@ -23,11 +20,11 @@ const Navigate = useNavigate()
 
     return (
         <>
-            <div className="container-fluid main">
+            <div className="container-fluid main-list">
                 <div className='vertical-align-wrap '>
                     <div className="  vertical-align-middle">
 
-                        <div className="today-head"> <h3>{users.employeeName} Attendance Detail</h3></div>
+                        <div className="today-head" style={{'textAlign':'center'}}> <h3>{users.employeeName} Attendance Detail</h3></div>
                         <div className='auth-box mt-5 '>
                             <div className="content">
                                         <div className="table-contents table-responsive mt-5">

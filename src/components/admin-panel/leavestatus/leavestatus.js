@@ -32,6 +32,7 @@ export default()=>{
                      <h3>Leaves Status</h3>
                  <form>  
                     {
+                         users.length===0 ? <div className="alert-msg mt-4"><h5>No Records Today</h5><i class="fa fa-times" aria-hidden="true"></i></div> :
                         users.map((user)=>(
                             <div>
                             <div className="form-group mt-5">

@@ -34,7 +34,7 @@ setUsers()
 }
     return(
         <>
-          <div className="container-fluid main">
+          <div className="container-fluid main-list">
        <div className='vertical-align-wrap '>
            <div className="  vertical-align-middle">
                <div className='auth-box mt-5 '>
