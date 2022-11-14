@@ -32,7 +32,7 @@ export default () => {
                 Authorization: 'Bearer' + token
             }
         }
-        axios.get(`https://crm-09.herokuapp.com/attendance/dailyatt/?date=${postDate}`, employee, headers).then((res) => {
+        axios.get(`https://crm-09.herokuapp.com/attendance/dailyatt?date=${postDate}`, employee, headers).then((res) => {
             setEmployee(res.data)
             setLoader(true)
         })
@@ -75,7 +75,11 @@ export default () => {
                         <div className="today-head"> <h3>Today Attendance</h3></div>
                         <div className='auth-box '>
                             <div className="content">
-                                <h3 >{time.date}</h3>
+                            <div className='yesterday-attendance d-flex' style={{'justifyContent':'space-between'}}>
+                                <div className='time'><h3>{time.date}</h3></div>
+                                <div className='yesterday-atten'><button className='bt' style={{'backgroundColor': '#1e75c7', 'color':'white' ,'borderRadius': '5px' ,'padding':'10px', 'border':'#1e75c7'}}
+                                 onClick={()=>{Navigate('/adminyesterdatattendance/detail/')}}>Yesterday Attendance</button></div>
+                                </div>    
                                 <div className="table-contents table-responsive mt-5">
                                     {loader ? <div>
                                         {employee.length === 0 ? <div className="alert-msg mt-4"><h5>No Records Today</h5><i class="fa fa-times" aria-hidden="true"></i></div> :
@@ -86,8 +90,10 @@ export default () => {
                                                         <tr>
                                                             <th scope="col">ID</th>
                                                             <th scope="col">Employee</th>
+                                                            <th scope="col">Status</th>
                                                             <th scope="col">Date</th>
                                                             <th scope="col">Time</th>
+                                                            <th scope="col">CheckOut Time</th>
                                                             <th scope="col">Edit</th>
                                                             <th scope="col">Delete</th>
 
@@ -99,8 +105,10 @@ export default () => {
                                                         <tr>
                                                             <td>{index.employeeId}</td>
                                                             <td>{index.employeeName}</td>
+                                                            <td>{index.wstatus}</td>
                                                             <td>{index.startdate}</td>
                                                             <td>{index.startTime}</td>
+                                                            <td>{index.checkoutTime}</td>
                                                             <td className=" return-add" data-toggle="modal" data-target="#myModal" onClick={() => setUserId(index._id)}><i class="fa fa-pencil-square-o" aria-hidden="true"></i> </td>
                                                             <td className=" return-add" data-toggle="modal" data-target="#myModal1" onClick={() => setUserId(index._id)}> <i className="fa fa-trash" aria-hidden="true"></i></td>
                                                         </tr>

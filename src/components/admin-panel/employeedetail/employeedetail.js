@@ -3,7 +3,7 @@ import { useState,useEffect } from 'react';
 import {useParams,useNavigate} from 'react-router-dom';  
 import './employeedetail.scss';
 import Cookie from 'react-cookies'
-export default (props)=>{
+export default ()=>{
 const[users,setUsers]=useState({})
 const[password,setPassword] =useState(false)
 const params=useParams();

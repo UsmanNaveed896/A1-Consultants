@@ -17,7 +17,6 @@ export default()=>{
         }
     }
     axios.get(`https://crm-09.herokuapp.com/attendance/empdaily/${userid}/${postdate}`, headers).then ((res)=>{
-        console.log(res,"ikl")
         setUsers(res.data)
     });
 },[])

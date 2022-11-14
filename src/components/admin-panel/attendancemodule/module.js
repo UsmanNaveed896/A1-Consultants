@@ -17,12 +17,14 @@ export default () => {
     const checkoutHandle = () => {
         let date = new Date()
         let hour = (date.getHours() < 12) ? date.getHours() : date.getHours() - 12;
+        Navigate(`/checkout/`)
         if (hour >= 8 && hour <= 12) {
             alert("You Can Not CheckOut Before 12 AM")
         } else {
             Navigate(`/checkout/`)
         }
     }
+    
     useEffect(() => {
         setInterval(() => {
             setTime(st => ({
@@ -35,7 +37,6 @@ export default () => {
     }, [])
     const postdate = moment().format("YYYY-MM-DD");
     const month = moment().format("M");
-
     const year = moment().format("YYYY");
     const postTime = moment().format("h:mm A");
     const [status, setStatus] = useState({
@@ -44,9 +45,8 @@ export default () => {
         employeeId: "",
         _id: "",
         startdate: postdate,
-        employeeId: "",
         month: month,
-        year: year
+        year: year,
     })
     const setStatusApi = (e) => {
         e.preventDefault(e)

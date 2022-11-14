@@ -11,9 +11,10 @@ const postcheckoutDate= moment().format("YYYY-MM-DD");
 const postTime= moment().format("h:mm A");
 const postdate= moment().format("YYYY-MM-DD");
 const [checkOut,setCheckOut]=useState({
-    checkoutDate:postcheckoutDate,
-    checkoutTime:postTime,
-    checkoutstatus:"done"
+    checkoutDate: postcheckoutDate,
+    checkoutTime: postTime,
+    checkoutstatus: "done",
+    
 })
   useEffect(()=>{
     let token = Cookie.load('token');
@@ -27,19 +28,15 @@ const [checkOut,setCheckOut]=useState({
         setUsers(res.data)
     });
 },[])
-useEffect(()=>{
-let token = Cookie.load('token');
-let userid=Cookie.load('userid');
-let headers = {
+const checkOutDone=()=>{
+    let token = Cookie.load('token');
+    let headers = {
     headers: {
         Authorization: "Bearer " + token,
     }
 }
-axios.patch(`https://crm-09.herokuapp.com/attendance/edit/${userid}`,checkOut, headers).then ((res)=>{
-    console.log(res,"confirm")
+axios.patch(`https://crm-09.herokuapp.com/attendance/edit/${users?._id}`,checkOut, headers).then ((res)=>{
 });
-},[])
-const checkOutDone=()=>{
     alert("Succesfully Checked Out")
     Navigate('/')
 }

@@ -1,8 +1,9 @@
 import './App.css';
 import Navbar from './components/admin-panel/navbar/navbar';
-import { Routes, Route, useLocation } from "react-router-dom";
-import { useEffect} from 'react';
+import { Routes, Route, useLocation ,} from "react-router-dom";
+import { useEffect,Suspense} from 'react';
 import { useBeforeunload } from 'react-beforeunload';
+import Spinner from 'react-bootstrap/Spinner';
 import Employeedetail from './components/admin-panel/employeedetail/employeedetail';
 import Login from './components/admin-panel/login/login'
 import Dashboard from './components/admin-panel/dashboard/dashboard'
@@ -37,6 +38,7 @@ import Completedtasklist from './components/admin-panel/todaycompletedtasklist/c
 import Completedtaskdetail from './components/admin-panel/todaycompletedtaskdetail/completedtaskdetail';
 import Monthlycompletedlist from './components/admin-panel/monthlycompletedtasklist/monthlycompleted';
 import Monthlycompleteddetail from './components/admin-panel/monthlycompletedtaskdetail/monthlycompleteddetail';
+import AdminYesterdayAttendancedetail from './components/admin-panel/yesterdayattendancedetail/adminyesterdaydetail'
                       // userpanel
 
 import Pendinglist from './components/user-panel/pendingtasklist/pendinglist';
@@ -85,7 +87,6 @@ function App() {
       Navigate('/login')
     }
   }, [])
- 
    useBeforeunload ((event)=>{
     event.preventDefault();
     Cookie.remove('token')
@@ -93,15 +94,15 @@ function App() {
    })
   return (
     <>
+  <Suspense fallback={<div className='spin' style={{textAlign : "center"}}><Spinner animation="border" /></div>}>
       {(Location.pathname !== "/login") && <Navbar />}
-
       <Routes>
         <Route exact path='/login' element={<Login />} />
         <Route path='/' element={<Dashboard />} />
         <Route path='/empdetail/:id' element={<Employeedetail />} />
         <Route path='/addemployee' element={<Addemployee />} />
         <Route path='/editemployee/:id' element={<Editemployee />} />
-        <Route path='/adminattendancedetail/:id' element={<Attendancedetail />} />
+        <Route path='/adminattendancedetail/' element={<Attendancedetail />} />
         <Route path='/attendance/' element={<Module />} />
         <Route path='/markattendance/' element={<Markattendance />} />
         <Route path='/listview' element={<Multipleuser />} />
@@ -127,6 +128,7 @@ function App() {
         <Route path='/dailyattendance/detail/:id' element={<Dailyattendancedetail/>} />
         <Route path='/yesterdatattendance/list' element={<Yesterdayattendance/>} />
         <Route path='/yesterdatattendance/detail/:id' element={<Yesterdayattendancedetail/>} />
+        <Route path='/adminyesterdatattendance/detail/' element={<AdminYesterdayAttendancedetail />} />
 
                     {/* User Pending Tasks Routes */}
         <Route path='/yesterdaytasks/' element={<Yesterdaytask/>} />
@@ -174,7 +176,7 @@ function App() {
         <Route path='/admin/assigntask' element={<Assigntasklist />} />
          <Route path='/admin/assigntask/detail/:id' element={<Assigntaskdetail/>} /> 
       </Routes>
-
+      </Suspense>
     </>
   );
 }

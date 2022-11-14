@@ -7,11 +7,9 @@ import '../../admin-panel/multipleusers/multipleuser.scss'
 export default () => {
     const [users, setUsers] = useState([]);
  const Navigate=useNavigate();
-    useEffect(() => {
-        loadUsers();
-    }, []);
+
  const postDate=moment().format("YYYY-MM-DD");
-    const loadUsers = async () => {
+    const loadUsers =  () => {
         let token = Cookie.load('token')
         let userId= Cookie.load('userid')
         let headers = {
@@ -23,6 +21,9 @@ export default () => {
          setUsers(res.data)
         });
     }   
+    useEffect(() => {
+        loadUsers();
+    }, []);
     return (
         <>
             <div className="container-fluid  main-list">

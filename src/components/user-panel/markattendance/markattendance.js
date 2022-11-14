@@ -29,7 +29,7 @@ export default (props) => {
                             <div className="content">
                                 <h3>{props.Title}</h3>
                                 <div className="employee-action mt-5">
-                                    {userType === 'admin' && <Link to="/adminattendancedetail/:id"> <div className="add-emp">               {/*   sHOW on Admin side */}
+                                    {userType === 'admin' && <Link to="/adminattendancedetail/"> <div className="add-emp">               {/*   sHOW on Admin side */}
                                         <div className="icon"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></div>
                                         <p>Employee Attendance</p>
                                         <img className="image-dashboard-two"src={IMG1} alt="emp" /> 
